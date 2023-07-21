@@ -5,7 +5,21 @@ namespace CodeChallengeTests
 {
   public class CodeChallenge4Test
   {
-
+    [Theory]
+    [InlineData(0, 0)]
+    [InlineData(1, 1)]
+    [InlineData(2, 1)]
+    [InlineData(3, 2)]
+    [InlineData(4, 3)]
+    [InlineData(5, 5)]
+    [InlineData(6, 8)]
+    [InlineData(7, 13)]
+    [InlineData(10, 55)]
+    public void GetNthNumberInFibonacciSequence_Test(int nthNumber, int expected)
+    {
+      int result = CodeChallenge4.GetNthNumberInFibonacciSequence(nthNumber);
+      Assert.Equal(expected, result);
+    }
     public void RowSums_Test()
     {
       int[][] inputMatrix = {
