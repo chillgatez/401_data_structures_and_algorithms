@@ -36,14 +36,14 @@ namespace CodeChallenges
     public override string ToString()
     {
       Node current = Header;
-      StringBuilder result = new StringBuilder();
+      string result = "";
       while (current != null)
       {
-        result.Append($"{{ {current.Value} }} -> ");
+        result += $"{{ {current.Value} }} -> ";
         current = current.Next;
       }
-      result.Append("NULL");
-      return result.ToString();
+      result += "NULL";
+      return result;
     }
   }
 
