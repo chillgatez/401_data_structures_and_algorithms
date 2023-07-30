@@ -32,7 +32,7 @@ namespace CodeChallengeTests
       int result = kthValue;
 
       // The expected value of the kth node from the end is 30
-      Assert.Equal(20, result);
+      Assert.Equal(30, result);
     }
 
     [Fact]
