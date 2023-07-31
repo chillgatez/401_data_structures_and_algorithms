@@ -21,12 +21,12 @@ namespace CodeChallengeTests
 
         LinkedListKth result = CodeChallenge8.ZipLists(list1, list2);
 
-        Assert.Equal(1, result.KthFromEnd(6)); // First node from the end
-        Assert.Equal(10, result.KthFromEnd(5)); // Second node from the end
-        Assert.Equal(2, result.KthFromEnd(4)); // Third node from the end
-        Assert.Equal(20, result.KthFromEnd(3)); // Fourth node from the end
-        Assert.Equal(3, result.KthFromEnd(2)); // Fifth node from the end
-        Assert.Equal(30, result.KthFromEnd(1)); // Sixth node from the end
+        Assert.Equal(1, result.KthFromEnd(6, result.GetKthNodeValue())); // First node from the end
+        Assert.Equal(10, result.KthFromEnd(5, result.GetKthNodeValue())); // Second node from the end
+        Assert.Equal(2, result.KthFromEnd(4, result.GetKthNodeValue())); // Third node from the end
+        Assert.Equal(20, result.KthFromEnd(3, result.GetKthNodeValue())); // Fourth node from the end
+        Assert.Equal(3, result.KthFromEnd(2, result.GetKthNodeValue())); // Fifth node from the end
+        Assert.Equal(30, result.KthFromEnd(1, result.GetKthNodeValue())); // Sixth node from the end
     }
 
     [Fact]
@@ -44,12 +44,12 @@ namespace CodeChallengeTests
 
         LinkedListKth result = CodeChallenge8.ZipLists(list1, list2);
 
-        Assert.Equal(1, result.KthFromEnd(6));
-        Assert.Equal(10, result.KthFromEnd(5));
-        Assert.Equal(2, result.KthFromEnd(4));
-        Assert.Equal(20, result.KthFromEnd(3));
-        Assert.Equal(3, result.KthFromEnd(2));
-        Assert.Equal(4, result.KthFromEnd(1));
+        Assert.Equal(1, result.KthFromEnd(6, result.GetKthNodeValue()));
+        Assert.Equal(10, result.KthFromEnd(5, result.GetKthNodeValue()));
+        Assert.Equal(2, result.KthFromEnd(4, result.GetKthNodeValue()));
+        Assert.Equal(20, result.KthFromEnd(3, result.GetKthNodeValue()));
+        Assert.Equal(3, result.KthFromEnd(2, result.GetKthNodeValue()));
+        Assert.Equal(4, result.KthFromEnd(1, result.GetKthNodeValue()));
     }
 
     [Fact]
@@ -67,12 +67,12 @@ namespace CodeChallengeTests
 
         LinkedListKth result = CodeChallenge8.ZipLists(list1, list2);
 
-        Assert.Equal(1, result.KthFromEnd(6));
-        Assert.Equal(10, result.KthFromEnd(5));
-        Assert.Equal(2, result.KthFromEnd(4));
-        Assert.Equal(20, result.KthFromEnd(3));
-        Assert.Equal(30, result.KthFromEnd(2));
-        Assert.Equal(40, result.KthFromEnd(1));
+        Assert.Equal(1, result.KthFromEnd(6, result.GetKthNodeValue()));
+        Assert.Equal(10, result.KthFromEnd(5, result.GetKthNodeValue()));
+        Assert.Equal(2, result.KthFromEnd(4, result.GetKthNodeValue()));
+        Assert.Equal(20, result.KthFromEnd(3, result.GetKthNodeValue()));
+        Assert.Equal(30, result.KthFromEnd(2, result.GetKthNodeValue()));
+        Assert.Equal(40, result.KthFromEnd(1, result.GetKthNodeValue()));
     }
 
     [Fact]
@@ -86,8 +86,8 @@ namespace CodeChallengeTests
 
         LinkedListKth result = CodeChallenge8.ZipLists(list1, list2);
 
-        Assert.Equal(1, result.KthFromEnd(2));
-        Assert.Equal(2, result.KthFromEnd(1));
+        Assert.Equal(1, result.KthFromEnd(2, result.GetKthNodeValue()));
+        Assert.Equal(2, result.KthFromEnd(1, result.GetKthNodeValue()));
     }
 
     [Fact]

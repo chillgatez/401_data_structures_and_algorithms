@@ -64,6 +64,7 @@ namespace CodeChallenges
         }
       }
     }
+
     //adds a new node with the given new value immediately after the first node that has the value specified
     public void InsertAfter(int value, int valueToInsert)
     {
@@ -74,6 +75,7 @@ namespace CodeChallenges
         // If the list is empty, set the new node as the head
         Head = newNode;
       }
+
       else
       {
         // Traverse the list to find the node with the specified value
