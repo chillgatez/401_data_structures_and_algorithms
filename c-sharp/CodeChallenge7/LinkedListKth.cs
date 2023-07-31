@@ -9,14 +9,15 @@ namespace CodeChallenges
       return kthNodeValue;
     }
 
-    public void KthFromEnd(int kthFromEnd)
+    // Modify the KthFromEnd method to accept two arguments
+    public void KthFromEnd(int kthFromEnd, LinkedListKth list)
     {
-      Node main_ptr = Head;
-      Node ref_ptr = Head;
+      Node main_ptr = list.Head;
+      Node ref_ptr = list.Head;
 
       int count = 0;
 
-      if (Head == null)
+      if (list.Head == null)
       {
         throw new ArgumentException("The linked list is empty.");
       }
@@ -36,7 +37,7 @@ namespace CodeChallenges
         count++;
       }
 
-      //traverse the list to find kth node from end
+      // Traverse the list to find the kth node from the end
       while (ref_ptr != null)
       {
         main_ptr = main_ptr.Next;
@@ -44,7 +45,6 @@ namespace CodeChallenges
       }
 
       kthNodeValue = main_ptr.Value;
-
 
     }
   }
