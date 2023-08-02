@@ -1,3 +1,5 @@
+using System.Reflection.PortableExecutable;
+
 namespace CodeChallenges
 {
   public class InsertableLinkedList : LinkedList
@@ -8,10 +10,10 @@ namespace CodeChallenges
     {
       Node newNode = new Node(value);
 
-      if (Head == null)
+      if (Header == null)
       {
         // If the list is empty, set the new node as the head
-        Head = newNode;
+        Header = newNode;
       }
       else
       {
