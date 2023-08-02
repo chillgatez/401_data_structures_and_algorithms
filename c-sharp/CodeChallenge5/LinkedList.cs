@@ -6,7 +6,7 @@ namespace CodeChallenges
   {
     private Node header;
 
-    public Node Head
+    public Node Header
     {
       get { return header; }
       set { header = value; }
@@ -15,13 +15,13 @@ namespace CodeChallenges
     public void AddNewNode(int value)
     {
       Node newNode = new Node(value);
-      newNode.Next = Head;
-      Head = newNode;
+      newNode.Next = Header;
+      Header = newNode;
     }
 
     public bool Contains(int value)
     {
-      Node current = Head;
+      Node current = Header;
       while (current != null)
       {
         if (current.Value == value)
@@ -35,7 +35,7 @@ namespace CodeChallenges
 
     public override string ToString()
     {
-      Node current = Head;
+      Node current = Header;
       string result = "";
       while (current != null)
       {
