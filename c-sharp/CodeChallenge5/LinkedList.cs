@@ -4,48 +4,63 @@ namespace CodeChallenges
 {
   public class LinkedList
   {
-    private Node header;
+    public Node Head { get; set; }
 
-    public Node Header
+    public LinkedList()
     {
-      get { return header; }
-      set { header = value; }
+      Head = null;
     }
 
-    public void AddNewNode(int value)
+    public void Insert(int value)
     {
       Node newNode = new Node(value);
-      newNode.Next = Header;
-      Header = newNode;
+
+      if (Head == null)
+      {
+        Head = newNode;
+      }
+      else
+      {
+        newNode.Next = Head;
+        Head = newNode;
+      }
     }
 
-    public bool Contains(int value)
+    public bool Includes(int value)
     {
-      Node current = Header;
-      while (current != null)
+      bool foundValue = false;
+
+
+      Node currentNode = Head;
+      while (currentNode != null)
       {
-        if (current.Value == value)
+        if (currentNode.Value == value)
         {
-          return true;
+          foundValue = true;
         }
-        current = current.Next;
+        currentNode = currentNode.Next;
       }
-      return false;
+
+      return foundValue;
+
     }
 
-    public override string ToString()
+    public string ToString()
     {
-      Node current = Header;
-      string result = "";
-      while (current != null)
+      string listString = "";
+      Node currentNode = Head;
+
+      while (currentNode != null)
       {
-        result += $"{{ {current.Value} }} -> ";
-        current = current.Next;
+        listString += String.Format("{0} -> ", currentNode.Value);
+        currentNode = currentNode.Next;
       }
-      result += "NULL";
-      return result;
+
+      return listString + "NULL";
     }
   }
+
+
 
   public class Node
   {
